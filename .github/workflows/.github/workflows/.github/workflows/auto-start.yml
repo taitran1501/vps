@@ -1,0 +1,13 @@
+name: Auto Restart
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Chạy lại mỗi 6 tiếng
+  workflow_dispatch:
+
+jobs:
+  auto-restart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "This runs every 6 hours."
